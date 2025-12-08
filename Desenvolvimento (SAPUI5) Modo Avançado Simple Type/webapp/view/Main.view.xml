@@ -1,0 +1,56 @@
+<mvc:View controllerName="megaacademy.mod3projeto.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table items="{/materiais}" mode="SingleSelectLeft" id="tblMateriais">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{i18n>titletable}" level="H2" />
+                        <ToolbarSpacer />
+                        <Button
+                            text="Criar"
+                            tooltip="Adicionar Material"
+                            icon="sap-icon://add"
+                            press="onAdd" />
+                        <Button
+                            text="Atualizar"
+                            tooltip="Atualizar Material"
+                            icon="sap-icon://edit"
+                            press="onEdit" />
+                        <Button
+                            text="Deletar"
+                            tooltip="Deletar Material"
+                            icon="sap-icon://delete"
+                            press="onDelete" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="{i18n>txtcolumn1}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>txtcolumn2}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>txtcolumn4}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier title="{Codmaterial}" />
+                            <Text text="{Descricao}" />
+                            <Label
+                                text="{
+                                    parts: [{path: 'Qtd'}, {path: 'Unidade'}],
+                                    formatter: '.formatterQtdUnidade'
+                                }"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

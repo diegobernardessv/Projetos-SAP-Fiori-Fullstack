@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Administrar Material" class="sapUiPopupWithPadding" contentWidth="30rem">
+        <content>
+            <Label text="{i18n>txtcolumn1}"></Label>
+            <Input id="Codmaterial"></Input>
+
+            <Label text="{i18n>txtcolumn2}"></Label>
+            <Input id="Descricao"></Input>
+
+            <Label text="{i18n>txtcolumn3}"></Label>
+            <Input id="Qtd"></Input>
+
+            <Label text="{i18n>txtcolumn4}"></Label>
+            <Input id="Unidade"></Input>
+        </content>
+        <buttons>
+            <Button id="btnCriar" text="Criar" press="onSave" type="Emphasized"></Button>
+            <Button id="btnEditar" text="Editar" press="onSaveEditar" type="Emphasized"></Button>
+            <Button text="Cancelar" press="onFragCloseDialog"></Button>
+        </buttons>
+    </Dialog>
+
+</core:FragmentDefinition>
