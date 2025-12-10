@@ -33,7 +33,7 @@
                         <Text text="{i18n>txtcolumn2}" />
                     </Column>
                     <Column>
-                        <Text text="{i18n>txtcolumn4}" />
+                        <Text text="{i18n>txtcolumn3}" />
                     </Column>
                 </columns>
                 <items>
