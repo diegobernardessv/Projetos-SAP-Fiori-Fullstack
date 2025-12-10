@@ -149,10 +149,10 @@ sap.ui.define([
          * Formatter function pra concatenar quantidade e unidade de medida
          */
         formatterQtdUnidade: function (fQuantidade, sUnidade) {
-            // Checks if the values exist to avoid errors
+            // Checa se os valores existem, para evitar erros
             if (fQuantidade !== undefined && fQuantidade !== null && sUnidade) {
-                // Formats the quantity to ensure two decimal places and returns the string
-                return Number(fQuantidade).toFixed(2) + " " + sUnidade;
+                // Formata a quantidade
+                return Number(fQuantidade).toFixed(0) + " " + sUnidade;
             }
             return ""; // Retorna vazio, caso não tenha valor
         }
